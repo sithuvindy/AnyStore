@@ -8,7 +8,7 @@ namespace AnyStore.BLL
 {
     class userBLL
     {
-        //Done 
+        
         public int id { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
