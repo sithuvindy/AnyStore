@@ -140,7 +140,7 @@ namespace AnyStore.UI
             txtAdress.Text = dgvUsers.Rows[rowIndex].Cells[9].Value.ToString();
             cmbGender.Text = dgvUsers.Rows[rowIndex].Cells[10].Value.ToString();
             cmbUserType.Text = dgvUsers.Rows[rowIndex].Cells[11].Value.ToString();
-           
+
 
         }
 
@@ -210,7 +210,7 @@ namespace AnyStore.UI
                 }
 
                 conn.Close();
-                
+
             }
             
             //Load Data on Data Grid view (Refreshing Data Grid View)

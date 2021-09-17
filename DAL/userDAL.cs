@@ -218,7 +218,7 @@ namespace AnyStore.DAL
 
         #endregion
 
-        #region Delete data from database
+        #region Delete data from database       
 
         /*public bool Delete(userBLL u)
         {
