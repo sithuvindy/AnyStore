@@ -62,9 +62,6 @@ namespace AnyStore.UI
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.anyStoreDataSet = new AnyStore.AnyStoreDataSet();
-            this.tblusersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_usersTableAdapter = new AnyStore.AnyStoreDataSetTableAdapters.tbl_usersTableAdapter();
             this.chk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,11 +74,27 @@ namespace AnyStore.UI
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblusersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.anyStoreDataSet = new AnyStore.AnyStoreDataSet();
+            this.tbl_usersTableAdapter = new AnyStore.AnyStoreDataSetTableAdapters.tbl_usersTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmpasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usertypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addeddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addedbyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.anyStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblusersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anyStoreDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,7 +167,6 @@ namespace AnyStore.UI
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(166, 25);
             this.txtLastName.TabIndex = 2;
-           
             // 
             // lblEMail
             // 
@@ -419,28 +431,27 @@ namespace AnyStore.UI
             this.contact,
             this.address,
             this.gender,
-            this.user_type});
+            this.user_type,
+            this.idDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.confirmpasswordDataGridViewTextBoxColumn,
+            this.contactDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.usertypeDataGridViewTextBoxColumn,
+            this.addeddateDataGridViewTextBoxColumn,
+            this.addedbyDataGridViewTextBoxColumn});
             this.dgvUsers.DataSource = this.tblusersBindingSource;
             this.dgvUsers.Location = new System.Drawing.Point(331, 84);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.Size = new System.Drawing.Size(466, 410);
             this.dgvUsers.TabIndex = 4;
-           
+            
             this.dgvUsers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsers_RowHeaderMouseClick);
-            // 
-            // anyStoreDataSet
-            // 
-            this.anyStoreDataSet.DataSetName = "AnyStoreDataSet";
-            this.anyStoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblusersBindingSource
-            // 
-            this.tblusersBindingSource.DataMember = "tbl_users";
-            this.tblusersBindingSource.DataSource = this.anyStoreDataSet;
-            // 
-            // tbl_usersTableAdapter
-            // 
-            this.tbl_usersTableAdapter.ClearBeforeFill = true;
             // 
             // chk
             // 
@@ -515,6 +526,99 @@ namespace AnyStore.UI
             this.user_type.HeaderText = "user_type";
             this.user_type.Name = "user_type";
             // 
+            // tblusersBindingSource
+            // 
+            this.tblusersBindingSource.DataMember = "tbl_users";
+            this.tblusersBindingSource.DataSource = this.anyStoreDataSet;
+            // 
+            // anyStoreDataSet
+            // 
+            this.anyStoreDataSet.DataSetName = "AnyStoreDataSet";
+            this.anyStoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbl_usersTableAdapter
+            // 
+            this.tbl_usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // confirmpasswordDataGridViewTextBoxColumn
+            // 
+            this.confirmpasswordDataGridViewTextBoxColumn.DataPropertyName = "confirm_password";
+            this.confirmpasswordDataGridViewTextBoxColumn.HeaderText = "confirm_password";
+            this.confirmpasswordDataGridViewTextBoxColumn.Name = "confirmpasswordDataGridViewTextBoxColumn";
+            // 
+            // contactDataGridViewTextBoxColumn
+            // 
+            this.contactDataGridViewTextBoxColumn.DataPropertyName = "contact";
+            this.contactDataGridViewTextBoxColumn.HeaderText = "contact";
+            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // usertypeDataGridViewTextBoxColumn
+            // 
+            this.usertypeDataGridViewTextBoxColumn.DataPropertyName = "user_type";
+            this.usertypeDataGridViewTextBoxColumn.HeaderText = "user_type";
+            this.usertypeDataGridViewTextBoxColumn.Name = "usertypeDataGridViewTextBoxColumn";
+            // 
+            // addeddateDataGridViewTextBoxColumn
+            // 
+            this.addeddateDataGridViewTextBoxColumn.DataPropertyName = "added_date";
+            this.addeddateDataGridViewTextBoxColumn.HeaderText = "added_date";
+            this.addeddateDataGridViewTextBoxColumn.Name = "addeddateDataGridViewTextBoxColumn";
+            // 
+            // addedbyDataGridViewTextBoxColumn
+            // 
+            this.addedbyDataGridViewTextBoxColumn.DataPropertyName = "added_by";
+            this.addedbyDataGridViewTextBoxColumn.HeaderText = "added_by";
+            this.addedbyDataGridViewTextBoxColumn.Name = "addedbyDataGridViewTextBoxColumn";
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,8 +663,8 @@ namespace AnyStore.UI
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.anyStoreDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblusersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anyStoreDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,5 +718,18 @@ namespace AnyStore.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn user_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn confirmpasswordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usertypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addeddateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addedbyDataGridViewTextBoxColumn;
     }
 }

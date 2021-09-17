@@ -54,14 +54,19 @@ namespace AnyStore.UI
             // TODO: This line of code loads data into the 'anyStoreDataSet.tbl_users' table. You can move, or remove it, as needed.
             this.tbl_usersTableAdapter.Fill(this.anyStoreDataSet.tbl_users);
             //Load Data on Data Grid view (Refreshing Data Grid View)
-            DataTable dt = dal.Select();
-            dgvUsers.DataSource = dt;
+            //DataTable dt = dal.Select();
+            //dgvUsers.DataSource = dt;
 
             //Call this method of header checkbox mouse click..
             //first add header checkbox than mouseclick. without checkbox what will u click?
 
-            //AddheaderCheckBox();
+            show_chkBox();
+
             //HeaderCheckBox.MouseClick += new MouseEventHandler(HeaderCheckBox_MouseClick);
+
+            //Load Data on Data Grid view (Refreshing Data Grid View)
+            DataTable dt = dal.Select();
+            dgvUsers.DataSource = dt;
 
         }
 
@@ -218,18 +223,43 @@ namespace AnyStore.UI
             dgvUsers.DataSource = dt;
         }
 
-        //Adding a header check box
+        private void show_chkBox()
+        {
+            Rectangle rect = dgvUsers.GetCellDisplayRectangle(0, -1 , true);
+            // set checkbox header to center of header cell. +1 pixel to position 
+            rect.Y = 2;
+            rect.X = rect.Location.X + (rect.Width / 3);
+            CheckBox checkboxHeader = new CheckBox();
+            checkboxHeader.Name = "checkboxHeader";
+            //dgvUsers[0, 0].ToolTipText = "sdfsdf";
+            checkboxHeader.Size = new Size(18, 18);
+            checkboxHeader.Location = rect.Location;         
+            checkboxHeader.CheckedChanged += new EventHandler(checkboxHeader_CheckedChanged);
+            dgvUsers.Controls.Add(checkboxHeader);
+        }
+        private void checkboxHeader_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox headerBox = ((CheckBox)dgvUsers.Controls.Find("checkboxHeader", true)[0]);
+            
+            for (int i = 0 ; i < dgvUsers.RowCount; i++)
+            {
+                dgvUsers.Rows[i].Cells[0].Value = headerBox.Checked;
+            }
+            
+        }
+        ////Adding a header check box
         //CheckBox HeaderCheckBox = null;
-        //bool IsHeaderCheckBoxClicked = false;
+        ////bool IsHeaderCheckBoxClicked = false;
         //private void AddheaderCheckBox()
         //{
         //    HeaderCheckBox = new CheckBox();
-        //    HeaderCheckBox.Size = new Size(15, 15);
-           
+        //    //HeaderCheckBox.Size = new Size(15, 15);
+
         //    //Add the CheckBox into the DataGridView
         //    this.dgvUsers.Controls.Add(HeaderCheckBox);
         //}
-        
+
+
         //Header check box click event
         /*private void HeaderCheckBoxClick(CheckBox HCheckBox)
         {
@@ -269,6 +299,6 @@ namespace AnyStore.UI
             }
         }
 
-      
+        
     }
 }
